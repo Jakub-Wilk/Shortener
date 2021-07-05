@@ -18,7 +18,7 @@
         </form>
         <div class="success">
             {% if success == 1 %}
-            Successfully shortened URL! Your URL is <a href="http://short.jakubwilk.xyz/{{ url_id }}" target="_blank">short.jakubwilk.xyz/{{ url_id }}</a>
+            Successfully shortened URL! Your URL is <a href="http://short.jakubwilk.xyz/{{ url_id | urlencode }}" target="_blank">short.jakubwilk.xyz/{{ url_id }}</a>
             {% elif success == -1 %}
             That short URL already exists!
             {% endif %}
