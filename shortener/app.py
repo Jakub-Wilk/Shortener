@@ -1,5 +1,6 @@
 from flask import Flask, redirect, request, render_template, session, url_for
 from flask_pymongo import PyMongo
+from urllib import parse as urlparse
 import string
 import random
 from .env import mongo_uri
@@ -27,6 +28,7 @@ def index():
     elif request.method == "POST":
         url = request.form["url"]
         url_id = request.form["url_id"]
+        url_id = urlparse.quote(url_id)
         if mongo.db.link_map.find_one({"url_id": url_id}) is not None:
             session["success"] = -1
             session["url"] = url
