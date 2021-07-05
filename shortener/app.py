@@ -3,11 +3,11 @@ from flask_pymongo import PyMongo
 from urllib import parse as urlparse
 import string
 import random
-from .env import mongo_uri
+import env
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = mongo_uri
-app.config["SECRET_KEY"] = mongo_uri
+app.config["MONGO_URI"] = env.mongo_uri
+app.config["SECRET_KEY"] = env.mongo_uri
 
 mongo = PyMongo(app)
 
