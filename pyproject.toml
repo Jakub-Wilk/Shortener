@@ -8,6 +8,7 @@ authors = ["Jakub Wilk <wilkjakub64@gmail.com>"]
 python = "^3.9"
 Flask = "^2.0.1"
 Flask-PyMongo = "^2.3.0"
+dnspython = "^2.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
