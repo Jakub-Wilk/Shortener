@@ -15,8 +15,8 @@ div, input {
 
 .title {
     height: 4rem;
-    font-size: 3rem;
-    margin-bottom: 4rem;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
     font-weight: bold;
     color: white;
     text-shadow: 0.2rem 0.2rem 0.3rem rgba(0,0,0,0.4);
@@ -41,7 +41,7 @@ input {
 }
 
 input[type=text] {
-    width: 40vw;
+    min-width: 40vw;
     padding-left: 0.5rem;
 }
 
