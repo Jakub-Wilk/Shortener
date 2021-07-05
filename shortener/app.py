@@ -44,8 +44,8 @@ def index():
 def redirect_to(url_id):
     if url_id == "favicon.ico":
         return "none"
-    url = mongo.db.link_map.find_one({"url_id": url_id})["url"]
+    url = mongo.db.link_map.find_one({"url_id": url_id})
     if url is not None:
-        return redirect(url, 301)
+        return redirect(url["url"], 301)
     else:
         return render_template("404.j2", url_id=url_id), 404
